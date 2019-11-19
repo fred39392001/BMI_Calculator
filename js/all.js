@@ -12,13 +12,18 @@ function addData(e){
     var height = document.querySelector('.height').value;
     var weight = document.querySelector('.weight').value;
     var BMI = weight / [(height/100)*(height/100)];
-    BMI = BMI.toFixed(2);
-    
+    BMI = BMI.toFixed(2); 
     if (height == ''){
         alert('請輸入身高');
         return;
-    } else if (weight == ''){
+    } else if (height.toString().length<2 || height.toString().length>3){
+        alert('請輸入正確數值');
+        return;
+    }  else if (weight == ''){
         alert('請輸入體重');
+        return;
+    } else if (weight.toString().length<2 || weight.toString().length>3){
+        alert('請輸入正確數值');
         return;
     } else if ( isNaN(BMI)){
         alert('請輸入正確的數值');
@@ -136,7 +141,7 @@ function deleteList(e) {
     // console.log(e);
     var del = event.target.id;
     var str = event.target.dataset.num;
-    console.log(event.target.dataset);
+    // console.log(event.target.dataset);
     if (del !== 'recordsDelete') {return;}
     data.splice(str,1);
     localStorage.setItem('listData',JSON.stringify(data));
