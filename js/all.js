@@ -121,7 +121,7 @@ function updateList(){
         str += '<div><small>體重</small>'+ data[i].Weight +'kg</div>';
         str += '<div><small>身高</small>'+ data[i].Height +'cm</div>';
         str+= '<div><small>'+ data[i].Time +'</small></div>'
-        str += '<div><img id="recordsDelete" src="img/forbidden-mark.svg"></div>';
+        str += '<div><img data-num="'+ i +'" id="recordsDelete" src="img/forbidden-mark.svg"></div>';
         str += '</div>';
     }
     recordsDataList.innerHTML = str;
@@ -136,9 +136,8 @@ function deleteList(e) {
     // console.log(e);
     var del = event.target.id;
     var str = event.target.dataset.num;
-    if (del !== 'recordsDelete') {
-      return;
-    }
+    console.log(event.target.dataset);
+    if (del !== 'recordsDelete') {return;}
     data.splice(str,1);
     localStorage.setItem('listData',JSON.stringify(data));
     updateList();
