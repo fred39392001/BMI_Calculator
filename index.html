@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="calculator">
+                <div class="bmiLogo">
+                    <img src="img/BMICLogo.png" alt="">
+                </div>
+                <div class="bmiInfo">
+                    <label class="infoTitle" for="heightId">身高 cm</label>
+                    <input type="text" id="heightId" class="height" placeholder="請輸入您的身高">
+                    <label class="infoTitle" for="weightId">體重 kg</label>
+                    <input type="text" id="weightId" class="weight" placeholder="請輸入您的體重">
+                </div>
+                <div class="bmiBtn">
+                    <!-- <a href="">看結果</a> -->
+                    <div class="btnAll">
+                        <div class="btnSend">
+                            <a href="">看結果</a>
+                        </div>
+                        <div id="btnStatusId" >
+                            <div id="btnInfoId1" >
+                                <!-- <p id="bmiNum"></p> -->
+                                <!-- <small id="smallText" style="visibility: hidden;">BMI</small> -->
+                            </div>
+                            <div id="btnIconId">
+                                <img id="btnIconImg" style="visibility: hidden;" src="/img/icons_loop.png" alt="">
+                            </div>
+                            <div id="btnInfoId2" class="btnInfo2"><p id="info2Text"></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <p class="recordsTitle">BMI 紀錄</p>
+            <div class="recordsData">
+                <!-- <div data-num="" class="good">
+                    <h2>理想</h2>
+                    <div><small>BMI</small>20.29</div>
+                    <div><small>體重</small>70kg</div>
+                    <div><small>身高</small>170cm</div>
+                    <div><small>06-19-2017</small></div>
+                    <div><img id="recordsDelete" src="img/forbidden-mark.svg" alt=""></div>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer">
+            <img src="/img/BMICLogo-S.png" alt="">
+        </div>
+    </div>
+<script src="/js/all.js"></script>
+</body>
+</html>
